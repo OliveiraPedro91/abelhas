@@ -4,6 +4,10 @@
     src: url(fontes/Slubby\ Slurpie.ttf);
     font-weight: normal;
 }
+*{
+    margin: 0px;
+    padding: 0px;
+}
 :root{
     /* Cores usadas no site: */
     --cor01: #fcf23485;
@@ -44,6 +48,11 @@ header > h3{
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.37);
     margin-bottom: 30px;
 }
+.sticky{
+    position: sticky;
+    top: 1px;
+} 
+
 nav{
     background-color: var(--cor05);
     padding: 10px;
