@@ -1,14 +1,22 @@
 @charset "UTF-08";
+
+
+/* font roboto  */
+/* imports*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 @font-face {
-    font-family: 'slubby';
+    font-family: 'slubby','roboto';
     src: url(fontes/Slubby\ Slurpie.ttf);
     font-weight: normal;
 }
-*{
+
+* {
     margin: 0px;
     padding: 0px;
 }
-:root{
+
+:root {
     /* Cores usadas no site: */
     --cor01: #fcf23485;
     --cor02: #e8c910;
@@ -20,27 +28,30 @@
     --fonte-destaque: 'slubby', sans-serif;
 }
 
-body{
+body {
     background-color: var(--cor01);
     margin: 0px;
 }
-header{
+
+header {
     background-image: linear-gradient(to bottom, var(--cor02), var(--cor05));
     min-height: 150px;
     padding-top: 30px;
     text-align: center;
 }
-header > h1{
+
+header>h1 {
     color: white;
-    font-size: 4em;
-    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-family: roboto;
     margin-bottom: 20px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.479);
 }
-header > h3{
+
+header>h3 {
     color: white;
     font-family: var(--fonte-padrao);
-    font-size: 1.2;
+    font-size: 1.1;
     max-width: 500px;
     margin: auto;
     padding-left: 10px;
@@ -48,58 +59,66 @@ header > h3{
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.37);
     margin-bottom: 30px;
 }
-.sticky{
+
+.sticky {
     position: sticky;
     top: 1px;
-} 
+}
 
-nav{
+nav {
     background-color: var(--cor05);
     padding: 10px;
-    text-align: left;  
+    text-align: left;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.281);
-    font-family: var(--fonte-destaque);
+    font-family: 'roboto';
     font-weight: bold;
 }
-nav > a{
+
+nav>a {
     color: white;
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
-    transition-duration: .3s; 
+    transition-duration: .3s;
 }
-nav > a:hover{
+
+nav>a:hover {
     background-color: var(--cor03);
 }
-aside{
+
+aside {
     background-color: var(--cor01);
-    margin: auto;
+    margin: 10px auto;
     max-width: 800px;
     min-width: 300px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 20px;
     text-align: justify;
     font-family: var(--fonte-padrao);
     word-spacing: 2px;
     line-height: 20px;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.281);
+
 }
-aside > a{
+
+aside>a {
     text-decoration: none;
     font-size: bold;
     font-family: var(--fonte-destaque);
     color: red;
 }
-aside > h2{
+
+aside>h2 {
     text-align: center;
     background-image: linear-gradient(to bottom, var(--cor02), var(--cor05));
     color: white;
     font-family: var(--fonte-destaque);
     padding: 10px;
-    margin: -10px -10px 0px -10px;
-    border-radius: 10px 10px 0px 0px;
+    margin: -10px -10px 10px -10px;
+      
 }
-main{
+
+main {
     background-color: white;
     margin: auto;
     max-width: 800px;
@@ -111,29 +130,35 @@ main{
     word-spacing: 2px;
     line-height: 20px;
 }
-p{
+
+p {
     text-indent: 15px;
 }
-article > h2{
+
+article>h2 {
     background-image: linear-gradient(to bottom, var(--cor02), var(--cor05));
-    font-family: var(--fonte-destaque);
+    font-family: 'roboto';
     padding: 5px;
     color: white;
     font-size: bolder;
     border-radius: 10px 10px 0px 0px;
 }
-blockquote{
+
+blockquote {
     font-family: 'Courier New', Courier, monospace;
 }
-img{
+
+img {
     max-width: 100%;
-    margin: auto;
+    margin: 10px auto;
     display: block;
 }
-div{
+
+div {
     justify-content: center;
     align-items: center;
 }
+
 /* footer{
     background-color: var(--cor05);
     margin-bottom: 0px;
@@ -142,7 +167,7 @@ div{
     font-size: 1.5em;
     color: white;
 } */
-footer{
+footer {
     background-color: var(--cor05);
     color: white;
     text-align: center;
@@ -150,12 +175,35 @@ footer{
     font-family: var(--fonte-destaque);
     padding: 5px;
 }
-footer a{
+
+footer a {
     color: white;
     font-weight: bolder;
-    text-decoration: none;  
+    text-decoration: none;
 }
-footer a:hover{
+
+footer a:hover {
     text-decoration: underline;
     color: var(--cor1);
+}
+
+/*   scroll**/
+
+ /* scroll cofig*/
+  /* Estilos para a barra de rolagem */
+  ::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color:white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:var(--cor03);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
